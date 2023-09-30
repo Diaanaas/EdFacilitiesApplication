@@ -1,0 +1,129 @@
+﻿@using System.Text.Json;
+@using System.Net;
+
+@model IEnumerable<EdFacilitiesApplication.Models.Facility>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>@ViewBag.CategoryName facilities</h1>
+
+<p>
+    <a asp-action="Create" asp-route-id="@ViewBag.CategoryId">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div class="mapWrapper">
+    <div id="map"></div>
+</div>
+
+@section scripts{
+    <script>
+        let map;
+        function getLL(str) {
+            const at = "@@";
+            const regexp = new RegExp(`${at}`);
+            const index = str.search(regexp);
+            let ll = "";
+            let countComa = 0;
+            for (let i = index + 1; countComa < 2; i++) {
+                if (str[i] == ',') {
+                    countComa++;
+                    if (countComa == 2) {
+                        break;
+                    }
+                }
+                ll += str[i];
+            }
+            return ll.split(",");
+        }
+        async function initMap() {
+            var model = @Html.Raw(JsonSerializer.Serialize(Model));
+            const info = [];
+            model.forEach((item, key, model) => {
+                let uri = item.Location;
+                    let name = item.Name;
+                const apiUrl = `https://unshorten.me/json/${encodeURIComponent(uri)}`;
+                fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            const res = getLL(data.resolved_url);
+                            const ll = {
+                                lat: parseFloat(res[0]),
+                                lng: parseFloat(res[1])
+                            };
+                            info.push({ ll, name });
+                            if (info.length == model.length) {
+                                const map = new google.maps.Map(document.getElementById("map"), {
+                                    zoom: 12,
+                                    center: info[0].ll,
+                                    fullscreenControl: false,
+                                    zoomControl: true,
+                                    streetViewControl: false
+                                });
+                                console.log(info);
+                                info.forEach(data => {
+                                    console.log(data);
+                                    let text = data.name + "";
+                                    console.log(text);
+                                    var infowindow = new google.maps.InfoWindow({
+                                        content: `<span>${text}</span>`
+                                    });
+                                    let marker = new google.maps.Marker({
+                                        position: data.ll,
+                                        map,
+                                        title: data.name
+                                    });
+                                    google.maps.event.addListener(marker, 'mouseover', function () {
+                                        infowindow.open(map, marker);
+                                    });
+                                })
+                            }
+                        } else {
+                            console.log("failed");
+                        }
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    })
+            })
+        }
+    </script>
+}
