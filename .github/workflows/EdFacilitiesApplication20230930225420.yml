@@ -1,10 +1,10 @@
-name: Сборка и развертывание приложения .NET Core в веб-приложение EdFacilitiesApplication20230930185421
+name: Сборка и развертывание приложения .NET Core в веб-приложение EdFacilitiesApplication20230930225420
 on:
   push:
     branches:
     - main
 env:
-  AZURE_WEBAPP_NAME: EdFacilitiesApplication20230930185421
+  AZURE_WEBAPP_NAME: EdFacilitiesApplication20230930225420
   AZURE_WEBAPP_PACKAGE_PATH: EdFacilitiesApplication\published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 7.0.x
@@ -44,5 +44,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        publish-profile: ${{ secrets.EdFacilitiesApplication20230930185421_DCBB }}
+        publish-profile: ${{ secrets.EdFacilitiesApplication20230930225420_1E59 }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
