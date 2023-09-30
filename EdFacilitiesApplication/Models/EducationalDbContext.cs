@@ -22,9 +22,6 @@ public partial class EducationalDbContext : DbContext
     public virtual DbSet<History> Histories { get; set; }
 
     public virtual DbSet<Student> Students { get; set; }
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=DESKTOP-VAOSC0M\\SQLEXPRESS;Database=EducationalDB; Trusted_Connection=True; TrustServerCertificate=True");
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Category>(entity =>
