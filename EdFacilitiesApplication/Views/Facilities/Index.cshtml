@@ -55,75 +55,84 @@
 
 @section scripts{
     <script>
-        let map;
-        function getLL(str) {
-            const at = "@@";
-            const regexp = new RegExp(`${at}`);
-            const index = str.search(regexp);
-            let ll = "";
-            let countComa = 0;
-            for (let i = index + 1; countComa < 2; i++) {
-                if (str[i] == ',') {
-                    countComa++;
-                    if (countComa == 2) {
-                        break;
-                    }
+        async function fetchAndInitializeMap() {   
+            const locations = await fetchData();   // get all locations
+            const map = createMap(locations);      // get map for locations
+            addMarkers(map, locations);            // add marker for map
+        }
+
+        async function fetchData() {
+            const model = @Html.Raw(JsonSerializer.Serialize(Model));
+            const locations = [];
+
+            for (const item of model) {
+                const uri = item.Location;
+                const name = item.Name;
+                const resolvedUrl = await unshortenURL(uri);
+
+                if (resolvedUrl) {
+                    const [lat, lng] = getLatLngFromResolvedURL(resolvedUrl);
+                    locations.push({ ll: { lat, lng }, name });
+                } else {
+                    console.log("Failed to unshorten URL for:", name);
                 }
-                ll += str[i];
             }
-            return ll.split(",");
+
+            return locations;
         }
-        async function initMap() {
-            var model = @Html.Raw(JsonSerializer.Serialize(Model));
-            const info = [];
-            model.forEach((item, key, model) => {
-                let uri = item.Location;
-                    let name = item.Name;
+
+        async function unshortenURL(uri) {
+            try {
                 const apiUrl = `https://unshorten.me/json/${encodeURIComponent(uri)}`;
-                fetch(apiUrl)
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            const res = getLL(data.resolved_url);
-                            const ll = {
-                                lat: parseFloat(res[0]),
-                                lng: parseFloat(res[1])
-                            };
-                            info.push({ ll, name });
-                            if (info.length == model.length) {
-                                const map = new google.maps.Map(document.getElementById("map"), {
-                                    zoom: 12,
-                                    center: info[0].ll,
-                                    fullscreenControl: false,
-                                    zoomControl: true,
-                                    streetViewControl: false
-                                });
-                                console.log(info);
-                                info.forEach(data => {
-                                    console.log(data);
-                                    let text = data.name + "";
-                                    console.log(text);
-                                    var infowindow = new google.maps.InfoWindow({
-                                        content: `<span>${text}</span>`
-                                    });
-                                    let marker = new google.maps.Marker({
-                                        position: data.ll,
-                                        map,
-                                        title: data.name
-                                    });
-                                    google.maps.event.addListener(marker, 'mouseover', function () {
-                                        infowindow.open(map, marker);
-                                    });
-                                })
-                            }
-                        } else {
-                            console.log("failed");
-                        }
-                    })
-                    .catch(error => {
-                        console.error(error);
-                    })
-            })
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                if (data.success && data.resolved_url) {
+                    return data.resolved_url;
+                }
+            } catch (error) {
+                console.error("Error unshortening URL:", error);
+            }
+
+            return null;
         }
+
+        function getLatLngFromResolvedURL(resolvedURL) {
+            const at = "@@";
+            const [lat, lng] = resolvedURL.split(at)[1].split(',');
+            return [parseFloat(lat), parseFloat(lng)];
+        }
+
+        function createMap(locations) {
+            console.log(locations);
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: locations[0].ll,
+                fullscreenControl: false,
+                zoomControl: true,
+                streetViewControl: false
+            });
+            return map;
+        }
+
+        function addMarkers(map, locations) {
+            locations.forEach(data => {
+                const text = data.name + "";
+                const infowindow = new google.maps.InfoWindow({
+                    content: `<span>${text}</span>`
+                });
+                const marker = new google.maps.Marker({
+                    position: data.ll,
+                    map,
+                    title: data.name
+                });
+
+                google.maps.event.addListener(marker, 'mouseover', function () {
+                    infowindow.open(map, marker);
+                });
+            });
+        }
+
+        fetchAndInitializeMap();
     </script>
 }
