@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace EdFacilitiesApplication.Models;
 
@@ -15,7 +16,9 @@ public partial class Facility
 
     public string Location { get; set; } = null!;
 
+    [JsonIgnore]
     public virtual Category Category { get; set; } = null!;
 
+    [JsonIgnore]
     public virtual ICollection<History> Histories { get; set; } = new List<History>();
 }

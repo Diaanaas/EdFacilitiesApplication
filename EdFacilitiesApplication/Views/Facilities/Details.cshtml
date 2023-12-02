@@ -1,42 +1,114 @@
-﻿@model EdFacilitiesApplication.Models.Facility
+﻿@using System.Text.Json;
+@using System.Net;
+
+@model EdFacilitiesApplication.Models.Facility
 
 @{
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Facility</h4>
+<div class="container mt-4">
+    <h1>Facility Details</h1>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Location)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Category)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Category.Id)
-        </dd>
-    </dl>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@Html.DisplayFor(model => model.Name)</h4>
+            <p class="card-text">@Html.DisplayFor(model => model.Description)</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <strong>Location:</strong> @Html.DisplayFor(model => model.Location)
+            </li>
+            <li class="list-group-item">
+                <strong>Category:</strong> @Html.DisplayFor(model => model.Category.Name)
+            </li>
+        </ul>
+    </div>
+
+    <div class="mapWrapper">
+        <div id="mapDetails"></div>
+    </div>
+
+    <div class="mt-4">
+        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+        <a class="btn btn-secondary" asp-action="Index">Back to List</a>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+@section scripts{
+    <script>
+        async function fetchAndInitializeMapDetails() {
+            const locations = await fetchDataDetails();
+            const mapDetails = createMapDetails(locations);
+            addMarkersDetails(mapDetails, locations);
+        }
+
+        async function fetchDataDetails() {
+            const item = @Html.Raw(JsonSerializer.Serialize(Model));
+            const locations = [];
+
+            const uri = item.Location;
+            const name = item.Name;
+            const resolvedUrl = await unshortenURL(uri);
+
+            if (resolvedUrl) {
+                const [lat, lng] = getLatLngFromResolvedURL(resolvedUrl);
+                locations.push({ ll: { lat, lng }, name });
+            } else {
+                console.log("Failed to unshorten URL for:", name);
+            }
+
+            return locations;
+        }
+
+        async function unshortenURL(uri) {
+            try {
+                const apiUrl = `https://unshorten.me/json/${encodeURIComponent(uri)}`;
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                if (data.success && data.resolved_url) {
+                    return data.resolved_url;
+                }
+            } catch (error) {
+                console.error("Error unshortening URL:", error);
+            }
+
+            return null;
+        }
+
+        function getLatLngFromResolvedURL(resolvedURL) {
+            const at = "@@";
+            const [lat, lng] = resolvedURL.split(at)[1].split(',');
+            return [parseFloat(lat), parseFloat(lng)];
+        }
+
+        function createMapDetails(locations) {
+            const map = new google.maps.Map(document.getElementById("mapDetails"), {
+                zoom: 12,
+                center: locations[0].ll,
+                fullscreenControl: false,
+                zoomControl: true,
+                streetViewControl: false
+            });
+            return map;
+        }
+
+        function addMarkersDetails(map, locations) {
+            locations.forEach(data => {
+                const text = data.name + "";
+                const infowindow = new google.maps.InfoWindow({
+                    content: `<span>${text}</span>`
+                });
+                const marker = new google.maps.Marker({
+                    position: data.ll,
+                    map,
+                    title: data.name
+                });
+            });
+        }
+
+        fetchAndInitializeMapDetails();
+    </script>
+}

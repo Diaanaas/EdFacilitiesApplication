@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<EducationalDbContext>(option => option.UseSqlServer(
-    builder.Configuration.GetConnectionString("OnlineConnection")
+    builder.Configuration.GetConnectionString("DefaultConnection")
 ));
 
 // Add services to the container.
@@ -29,6 +29,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Categories}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

@@ -9,117 +9,117 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EdFacilitiesApplication
 build_property.RootNamespace = EdFacilitiesApplication
-build_property.ProjectDir = C:\Users\Diana\Desktop\EdFacilitiesApplication\EdFacilitiesApplication\
+build_property.ProjectDir = C:\Users\Diana\Desktop\3 курс\свистунов\EdFacilitiesApplication\EdFacilitiesApplication\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\Diana\Desktop\EdFacilitiesApplication\EdFacilitiesApplication
+build_property.MSBuildProjectDirectory = C:\Users\Diana\Desktop\3 курс\свистунов\EdFacilitiesApplication\EdFacilitiesApplication
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Categories/Create.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Categories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Categories/Delete.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Categories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Categories/Details.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Categories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Categories/Edit.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Categories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Categories/Index.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Facilities/Create.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Facilities/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjaWxpdGllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Facilities/Delete.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Facilities/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjaWxpdGllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Facilities/Details.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Facilities/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjaWxpdGllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Facilities/Edit.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Facilities/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjaWxpdGllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Facilities/Index.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Facilities/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjaWxpdGllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Histories/Create.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Histories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Histories/Delete.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Histories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Histories/Details.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Histories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Histories/Edit.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Histories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Histories/Index.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Histories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Home/Index.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Home/Privacy.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Shared/Error.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Students/Create.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Students/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Students/Delete.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Students/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Students/Details.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Students/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Students/Edit.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Students/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Students/Index.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Students/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/_ViewImports.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/_ViewStart.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diana/Desktop/EdFacilitiesApplication/EdFacilitiesApplication/Views/Shared/_Layout.cshtml]
+[C:/Users/Diana/Desktop/3 курс/свистунов/EdFacilitiesApplication/EdFacilitiesApplication/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-dhowi3trig

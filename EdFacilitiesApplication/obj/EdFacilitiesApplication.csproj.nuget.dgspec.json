@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diana\\Desktop\\EdFacilitiesApplication\\EdFacilitiesApplication\\EdFacilitiesApplication.csproj": {}
+    "C:\\Users\\Diana\\Desktop\\3 курс\\свистунов\\EdFacilitiesApplication\\EdFacilitiesApplication\\EdFacilitiesApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diana\\Desktop\\EdFacilitiesApplication\\EdFacilitiesApplication\\EdFacilitiesApplication.csproj": {
+    "C:\\Users\\Diana\\Desktop\\3 курс\\свистунов\\EdFacilitiesApplication\\EdFacilitiesApplication\\EdFacilitiesApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diana\\Desktop\\EdFacilitiesApplication\\EdFacilitiesApplication\\EdFacilitiesApplication.csproj",
+        "projectUniqueName": "C:\\Users\\Diana\\Desktop\\3 курс\\свистунов\\EdFacilitiesApplication\\EdFacilitiesApplication\\EdFacilitiesApplication.csproj",
         "projectName": "EdFacilitiesApplication",
-        "projectPath": "C:\\Users\\Diana\\Desktop\\EdFacilitiesApplication\\EdFacilitiesApplication\\EdFacilitiesApplication.csproj",
+        "projectPath": "C:\\Users\\Diana\\Desktop\\3 курс\\свистунов\\EdFacilitiesApplication\\EdFacilitiesApplication\\EdFacilitiesApplication.csproj",
         "packagesPath": "C:\\Users\\Diana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diana\\Desktop\\EdFacilitiesApplication\\EdFacilitiesApplication\\obj\\",
+        "outputPath": "C:\\Users\\Diana\\Desktop\\3 курс\\свистунов\\EdFacilitiesApplication\\EdFacilitiesApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Diana\\AppData\\Roaming\\NuGet\\NuGet.Config",

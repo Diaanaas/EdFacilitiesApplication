@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lay1szfPcYoHpMy7uJ8EXVeAubVD1QPcy3T8BypnJan89O2XJ4aoDyp/i7AEs7UGPha2C9Ue8S0rC5Fm+7D0kg==",
+  "dgSpecHash": "O0WeHCfFmjwqhfBgJBwrNiQ/eiLPdZ+zZnkrFu3LGj68mF5UKbtsR1AFXvHxaLuIrPiBL27AKwIukmQooy643g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Diana\\Desktop\\EdFacilitiesApplication\\EdFacilitiesApplication\\EdFacilitiesApplication.csproj",
+  "projectFilePath": "C:\\Users\\Diana\\Desktop\\3 курс\\свистунов\\EdFacilitiesApplication\\EdFacilitiesApplication\\EdFacilitiesApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Diana\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Diana\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

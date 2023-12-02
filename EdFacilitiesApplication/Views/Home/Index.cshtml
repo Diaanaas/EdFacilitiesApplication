@@ -1,8 +1,81 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    .top-img {
+        width: 75%;
+        height: 75%;
+    }
+
+    .imageWrapper {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fixedCard {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+    }
+
+    .container {
+        margin-bottom: 30px;
+    }
+</style>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="description" content="Site for educational history check. Here you can look for your education timeline" />
+
+<div class="container">
+    <div class="imageWrapper">
+        <h1>Welcome to Educational history service</h1>
+        <img src="~/school.jpg" id="categoriesImage" class="card-img-top top-img" alt="Categories Image">
+    </div>
+    <div class="row main">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Facilities</h5>
+                    <p class="card-text">View Facilities of some category.</p>
+                    @Html.ActionLink("View Facilities", "Index", "Facilities", null, new { @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Students</h5>
+                    <p class="card-text">View all of the students in the system</p>
+                    @Html.ActionLink("View Students", "Index", "Students", null, new { @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">History</h5>
+                    <p class="card-text">Check out history of your education</p>
+                    @Html.ActionLink("View Histories", "Index", "Histories", null, new { @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-4 offset-md-4 fixedCard">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Us</h5>
+                    <p class="card-text">Olesya Honchara, 77, Kyiv, 0800 302 050</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
